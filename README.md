@@ -1,54 +1,54 @@
-import java.util.Scanner;
+Java Project: ATM Interface, Grade Calculator, and Number Game
 
-public class GradeCalculator {
-    public static void main(String[] args) {
-        Scanner sc =new Scanner(System.in);
-        System.out.println("Enter the number of subject:- ");
-        int ns = sc.nextInt();
-        if(ns<=1){
-            System.out.println("Enter the number of subjects:- ");
-            return;
-        }
-        int totalmarks=0;
-        int maxmarkspersub = 100;
-        for (int i=1; i<= ns; i++){
-            System.out.println("Enter marks obtained in subject " + i );
-            int marks = sc.nextInt();
-            if(marks<0||marks>maxmarkspersub){
-                System.out.println("Marks should be in range of 0 to 100. please enter valid marks.");
-                i--;
-            }
-            else{
-                totalmarks += marks;
-            }
-        }
+Overview
 
-        double numsubjects = ns;
-        double avpercentage = (double) totalmarks / (numsubjects * maxmarkspersub)*100;
-        System.out.println("Total Marks: "+totalmarks);
-        System.out.println("Average Percentage: "+ avpercentage + "%");
-        String grade;
-        if (avpercentage>=90){
-            grade="A+";
+This Java project consists of three separate applications:
 
-        } else if (avpercentage>=80){
-            grade="A";
-        } else if (avpercentage>=70) {
-            grade="B";
+ATM Interface: A simple ATM interface that allows users to perform basic banking operations such as deposit, withdraw, and check balance.
+Grade Calculator: A grade calculator that takes in student scores and calculates their final grade based on a weighted average.
+Number Game: A simple number guessing game where the user has to guess a randomly generated number within a certain range.
+Features
 
-        } else if (avpercentage>=60) {
-            grade="C";
+ATM Interface:
+Deposit money into account
+Withdraw money from account
+Check account balance
+Grade Calculator:
+Calculate final grade based on weighted average of scores
+Support for multiple scoring categories (e.g. quizzes, exams, assignments)
+Number Game:
+Randomly generated number to guess
+User input validation
+Win/lose conditions
+Requirements
 
-        } else if (avpercentage>=50) {
-            grade="D";
-            
-            
-        }
-        else {
-            grade="F";
+Java 8 or later
+Eclipse or other Java IDE
+Usage
 
+Clone the repository: git clone https://github.com/navneetmbdp/CODESOFT
+Open the project in your preferred Java IDE
+Run the individual applications:
+ATM Interface: java -jar atm.jar
+Grade Calculator: java -jar grade-calculator.jar
+Number Game: java -jar number-game.jar
+Code Structure
 
-        }
-        System.out.println("Grade:- " +grade);    
-    }
-}
+The code is organized into three separate packages:
+
+atm: contains the ATM interface application
+grade-calculator: contains the grade calculator application
+number-game: contains the number game application
+Each package has its own Main class that serves as the entry point for the application.
+
+Contributing
+
+Contributions are welcome! If you'd like to contribute to this project, please fork the repository and submit a pull request with your changes.
+
+License
+
+This project is licensed under the MIT License. See LICENSE.txt for details.
+
+Acknowledgments
+
+Navneet Tripathi for creating this project
